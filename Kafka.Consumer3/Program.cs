@@ -3,7 +3,7 @@
 var config = new ConsumerConfig
 {
     BootstrapServers = "localhost:29092",
-    GroupId = "group3",
+    GroupId = "group1",
     AutoOffsetReset = AutoOffsetReset.Earliest,
     IsolationLevel = IsolationLevel.ReadCommitted,
     PartitionAssignmentStrategy = PartitionAssignmentStrategy.CooperativeSticky
@@ -11,7 +11,7 @@ var config = new ConsumerConfig
 
 using var consumer = new ConsumerBuilder<int, string>(config).Build();
 
-consumer.Subscribe("mytopic");
+consumer.Subscribe("persons");
 
 while (true)
 {

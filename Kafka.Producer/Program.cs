@@ -1,8 +1,9 @@
 ﻿using Confluent.Kafka;
 using Kafka.Common;
 using System.Net;
+using System.Text.Json;
 
-var persons = Enumerable.Range(1, 10000).Select(x => new Person(x, x.ToString()));
+var persons = Enumerable.Range(1, 10000).Select(x => new Person(x, "Nika", "Tabatadze", 23, DateTime.Now));
 
 var config = new ProducerConfig
 {
@@ -10,26 +11,18 @@ var config = new ProducerConfig
     ClientId = Dns.GetHostName(),
 };
 
-using var producer = new ProducerBuilder<int, string>(config).Build();
-
-//var topic = new TopicPartition("mytopic", new Partition(1));
+using var producer = new ProducerBuilder<int, Person>(config).Build();
 
 foreach (var person in persons)
 {
-    var result = await producer.ProduceAsync("mytopic", new Message<int, string>()
+    var result = await producer.ProduceAsync("persons", new Message<int, Person>()
     {
-        Key = person.Key,
-        Value = person.Value
+        Key = person.Id,
+        Value = person
     });
 
-    Console.WriteLine($"key: {person.Key}, status: {result.Status}, partition: {result.Partition.Value}");
+    Console.WriteLine($"key: {person.Id}, status: {result.Status}, partition: {result.Partition.Value}");
 }
-//var result = await producer.ProduceAsync(topic, new Message<int, string>()
-//{
-//    Key = 7,
-//    Value = "test message from nick!!!!"
-//});
 
-//Console.WriteLine(result.Status);
 Console.WriteLine("done!!!");
 Console.ReadLine();

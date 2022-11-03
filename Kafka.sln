@@ -9,13 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kafka.Common", "Kafka.Commo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kafka.Consumer1", "Kafka.Consumer1\Kafka.Consumer1.csproj", "{01D89B8D-E579-49B4-BA9D-C64F42AA8AEA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kafka.Producer1", "Kafka.Producer1\Kafka.Producer1.csproj", "{77C42CD5-C88C-497A-BDB1-1B94201ACA5D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kafka.Consumer2", "Kafka.Consumer2\Kafka.Consumer2.csproj", "{D3B9CE1F-3B58-4375-960D-A30A79BEBFC8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumers", "Consumers", "{69F1867A-4A6C-4A58-802F-C29CB38BEA6D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kafka.Consumer3", "Kafka.Consumer3\Kafka.Consumer3.csproj", "{CC843514-9836-4BCF-8F7C-8F7BAAE38236}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kafka.TestProducer", "Kafka.TestProducer\Kafka.TestProducer.csproj", "{955FD516-2CE9-473D-B895-37826C121327}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,6 @@ Global
 		{01D89B8D-E579-49B4-BA9D-C64F42AA8AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01D89B8D-E579-49B4-BA9D-C64F42AA8AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01D89B8D-E579-49B4-BA9D-C64F42AA8AEA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77C42CD5-C88C-497A-BDB1-1B94201ACA5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77C42CD5-C88C-497A-BDB1-1B94201ACA5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77C42CD5-C88C-497A-BDB1-1B94201ACA5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77C42CD5-C88C-497A-BDB1-1B94201ACA5D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D3B9CE1F-3B58-4375-960D-A30A79BEBFC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D3B9CE1F-3B58-4375-960D-A30A79BEBFC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3B9CE1F-3B58-4375-960D-A30A79BEBFC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,6 +43,10 @@ Global
 		{CC843514-9836-4BCF-8F7C-8F7BAAE38236}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC843514-9836-4BCF-8F7C-8F7BAAE38236}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC843514-9836-4BCF-8F7C-8F7BAAE38236}.Release|Any CPU.Build.0 = Release|Any CPU
+		{955FD516-2CE9-473D-B895-37826C121327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955FD516-2CE9-473D-B895-37826C121327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955FD516-2CE9-473D-B895-37826C121327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{955FD516-2CE9-473D-B895-37826C121327}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
