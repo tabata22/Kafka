@@ -16,6 +16,8 @@ using var consumer = new ConsumerBuilder<int, string>(config).Build();
 
 consumer.Subscribe("persons");
 
+Console.WriteLine("queue started successfully");
+
 while (!cancellationToken.IsCancellationRequested)
 {
     var result = consumer.Consume();
